@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .quadro {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+
+        .quadrado {
+            position: absolute;
+            width: 50vw;
+            height: 50vh;
+        }
+
+        
+        .vermelho {
+            background-color: red;
+            top: 0;
+            left: 0;
+            animation: moverVermelho 3s infinite alternate;
+        }
+
+
+        .azul {
+            background-color: blue;
+            bottom: 0;
+            right: 0;
+            animation: moverAzul 3s infinite alternate;
+        }
+
+
+        .roxo {
+            background-color: purple;
+            top: 25vh;
+            left: 25vw;
+            width: 50vw;
+            height: 50vh;
+            opacity: 0;
+            animation: mostrarRoxo 3s infinite alternate;
+        }
+
+
+        @keyframes moverVermelho {
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            100% {
+                top: 25vh;
+                left: 25vw;
+            }
+        }
+
+        @keyframes moverAzul {
+            0% {
+                bottom: 0;
+                right: 0;
+            }
+
+            100% {
+                bottom: 25vh;
+                right: 25vw;
+            }
+        }
+
+        @keyframes mostrarRoxo {
+
+            0%,
+            40% {
+                opacity: 0;
+            }
+
+            50%,
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <div class="quadro">
+        <div class="quadrado vermelho"></div>
+        <div class="quadrado azul"></div>
+        <div class="quadrado roxo"></div>
+    </div>
+</body>
+
+</html>
